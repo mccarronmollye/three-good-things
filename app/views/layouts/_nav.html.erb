@@ -5,6 +5,7 @@
       <li><%=link_to "Signup", new_user_registration_path%></li>
       <li><%= link_to "Login", new_user_session_path%></li>
     <% else %>
+      <li><%= current_user.first_name %> </li>
       <li><%= link_to "Logout", destroy_user_session_path, method: "delete" %></li>
     <% end %>
   </ul>
